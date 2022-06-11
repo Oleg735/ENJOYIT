@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Site Show View Controller-->
+        <scene sceneID="KtZ-4C-MAu">
+            <objects>
+                <viewController storyboardIdentifier="SiteShowViewController" id="cI4-m2-eQ3" customClass="SiteShowViewController" customModule="AudioNetwork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RqO-c6-mxN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZS-cr-1Pt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZkE-4P-74w">
+                                <rect key="frame" x="0.0" y="852" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Item" image="arrowshape.turn.up.backward.fill" catalog="system" id="4cC-ZM-ohS">
+                                        <connections>
+                                            <action selector="backButtonAction:" destination="cI4-m2-eQ3" id="oFI-TY-C6y"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="3te-dP-I2A"/>
+                                    <barButtonItem title="Item" image="arrowshape.turn.up.forward.fill" catalog="system" id="sDw-6r-1VC">
+                                        <connections>
+                                            <action selector="foreardButtnAction:" destination="cI4-m2-eQ3" id="2yl-vk-ua3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pev-QM-MbC"/>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ZHM-QM-JJB"/>
+                                    <barButtonItem title="Item" image="arrow.clockwise" catalog="system" id="MkU-Be-TLS">
+                                        <connections>
+                                            <action selector="refreshAction:" destination="cI4-m2-eQ3" id="SYe-nv-hGx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="SCt-tP-dev"/>
+                                    <barButtonItem title="Item" image="plus" catalog="system" id="3cL-E7-yo2">
+                                        <connections>
+                                            <action selector="addButtonAction:" destination="cI4-m2-eQ3" id="q2I-iw-NzM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <color key="barTintColor" systemColor="systemIndigoColor"/>
+                            </toolbar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Qjn-Sd-Tya">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemIndigoColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8fy-GA-gkl"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="YZS-cr-1Pt" firstAttribute="trailing" secondItem="8fy-GA-gkl" secondAttribute="trailing" id="5LJ-tw-i78"/>
+                            <constraint firstItem="YZS-cr-1Pt" firstAttribute="leading" secondItem="8fy-GA-gkl" secondAttribute="leading" id="6VR-tc-UK8"/>
+                            <constraint firstItem="Qjn-Sd-Tya" firstAttribute="centerY" secondItem="RqO-c6-mxN" secondAttribute="centerY" id="7HL-3n-8Fa"/>
+                            <constraint firstItem="8fy-GA-gkl" firstAttribute="bottom" secondItem="YZS-cr-1Pt" secondAttribute="bottom" id="DbU-dw-sPu"/>
+                            <constraint firstItem="YZS-cr-1Pt" firstAttribute="top" secondItem="8fy-GA-gkl" secondAttribute="top" id="HNR-GB-Wye"/>
+                            <constraint firstItem="Qjn-Sd-Tya" firstAttribute="centerX" secondItem="RqO-c6-mxN" secondAttribute="centerX" id="ztf-I8-GPi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addFavorite" destination="3cL-E7-yo2" id="lJH-7D-HOA"/>
+                        <outlet property="spinner" destination="Qjn-Sd-Tya" id="KaM-vv-wL9"/>
+                        <outlet property="wkWeb" destination="YZS-cr-1Pt" id="0t1-RE-wbk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K7l-Fl-Z4N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821" y="103"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
+        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.forward.fill" catalog="system" width="128" height="106"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

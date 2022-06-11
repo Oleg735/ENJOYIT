@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="TasksCore" representedClassName="TasksCore" syncable="YES" codeGenerationType="class">
+        <attribute name="artistNameCore" optional="YES" attributeType="String"/>
+        <attribute name="artworkUrl100Core" optional="YES" attributeType="String"/>
+        <attribute name="kindCore" optional="YES" attributeType="String"/>
+        <attribute name="previewUrlCore" optional="YES" attributeType="String"/>
+        <attribute name="releaseDateCore" optional="YES" attributeType="String"/>
+        <attribute name="trackNameCore" optional="YES" attributeType="String"/>
+        <attribute name="trackViewUrlCore" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="TasksCore" positionX="-54" positionY="-9" width="128" height="134"/>
+    </elements>
+</model>
